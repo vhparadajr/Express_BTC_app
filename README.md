@@ -13,7 +13,7 @@
 Modified from Scotch.io's auth tutorial
 
 # BTC Price Prediction
-An app to guess what the price of Bitcoin is going to be within the next 3 days
+An app to speculate what the price of Bitcoin is going to be within the next 3 days
 
 
 ![alt tag](https://i.imgur.com/Bnv2UiZ.png)
