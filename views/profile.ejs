@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <title>BTC</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1 class="mainText"><span class="fa fa-anchor"></span> Profile Page</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+
+                <% if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+
+            </div>
+        </div>
+        <div class="col-sm-6 border">
+          <h3>Predictions</h3>
+          <ul class="messages">
+          <% for(var i=0; i<price.length; i++) {%>
+            <li class="message">
+              <span><%= price[i].name %></span>
+              <span><%= price[i].price %></span>
+              <span><%= price[i].priceUp %></span>
+              <span><%= price[i].timeframe %></span>
+              <span><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></span>
+              <span><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></span>
+              <span><i class="fas fa-times" aria-hidden="true"></i></span>
+            </li>
+          <% } %>
+          </ul>
+        </div>
+        <div class="messagesSection">
+          <h2>Price Prediction</h2>
+        <% if (user.local.email) { %>
+          <form action="/messages" method="POST">
+            <input type="text" value="<%= user.local.email %>" name="name">
+            <input type="text" placeholder="Price" name="price">
+            <input type="text" placeholder="Timeframe" name="timeframe">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <% } %>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+  background: url('https://4.bp.blogspot.com/-W-6powW8tDo/U_4VakmA76I/AAAAAAAAEMI/ccbJeib7XLA/s1600/bitcoin-worldwide-connections.jpg') center;
+  background-position-y: -52px;
+}
+img{
+  height: 200px;
+  border: 2px solid darkgreen;
+}
+
+.mainText{
+  color: white;
+}
+.innerText{
+  color: black;
+}
+.btn-default{
+  color: black;
+  border-color: white;
+  background-color: rgba(255,255,255,.3);
+}
+.fa{
+  margin-right: 8px;
+}
+.btn-warning{
+  color: black;
+  border-color: white;
+  background-color: rgba(255,255,255,.3)
+}
+.greyText{
+  color: darkgrey;
+}
+
+
+/* Profile Page */
+.well{
+  background-color: rgba(255,255,255,.3);
+  color: black;
+}
+.border{
+  border: 1px solid white;
+  background-color: rgba(255,255,255,.3);
+  border-radius: 4px;
+  padding: 19px;
+}
+.col-sm-6{
+  height: 241px;
+  color: black;
+}
+.messagesSection{
+  display: inline-block;
+  margin-left: 1.5%;
+  border: 1px solid white;
+  width: 98%;
+  margin-right: 14.5%;
+  padding: 16px;
+  padding-top: 0px;
+  margin-top: 15px;
+  border-radius: 4px;
+  color: black;
+  background-color: rgba(255,255,255,.3);
+}
+ul{
+  list-style: none;
+}
+.fa-long-arrow-alt-up{
+  color: green;
+}
+.fa-long-arrow-alt-down{
+  color: red;
+}
